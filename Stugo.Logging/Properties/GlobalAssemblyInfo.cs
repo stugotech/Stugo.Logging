@@ -1,6 +1,6 @@
 using System.Reflection;
 
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Simplifies logging using log4net")]
 [assembly: AssemblyCompany("Stugo Ltd")]
 [assembly: AssemblyProduct("Stugo.Logging")]
 [assembly: AssemblyCopyright("Copyright © Stugo Ltd 2016")]

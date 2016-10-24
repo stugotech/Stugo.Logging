@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props" Condition="Exists('..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Stugo.AssemblyDetails, Version=1.1.6141.24665, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stugo.AssemblyDetails.1.1.6141.24665\lib\net452\Stugo.AssemblyDetails.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -64,7 +68,7 @@
     <Compile Include="..\Stugo.Logging\Properties\VersionInfo.generated.cs">
       <Link>Properties\VersionInfo.generated.cs</Link>
     </Compile>
-    <Compile Include="Test1.cs" />
+    <Compile Include="LoggerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
