@@ -1,0 +1,52 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stugo.Logging", "Stugo.Logging\Stugo.Logging.csproj", "{617D0445-D7D1-4F2D-940B-71F3C09B353C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{5CF29ACF-04F6-40E5-B410-709535122020}"
+	ProjectSection(SolutionItems) = preProject
+		tools\GitVersion.targets = tools\GitVersion.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{8648A931-0DB8-43DF-88D9-FCF87298B684}"
+	ProjectSection(SolutionItems) = preProject
+		tools\NuGet\NuGet.Config = tools\NuGet\NuGet.Config
+		tools\NuGet\NuGet.exe = tools\NuGet\NuGet.exe
+		tools\NuGet\NuGet.targets = tools\NuGet\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D73A39FE-E312-4DAA-AB72-AA9285605549}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		build.cmd = build.cmd
+		publish.cmd = publish.cmd
+		release.cmd = release.cmd
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stugo.Logging.Test", "Stugo.Logging.Test\Stugo.Logging.Test.csproj", "{275295C9-E3BF-4D63-B7A6-83698BF88865}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{617D0445-D7D1-4F2D-940B-71F3C09B353C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{617D0445-D7D1-4F2D-940B-71F3C09B353C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{617D0445-D7D1-4F2D-940B-71F3C09B353C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{617D0445-D7D1-4F2D-940B-71F3C09B353C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{275295C9-E3BF-4D63-B7A6-83698BF88865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{275295C9-E3BF-4D63-B7A6-83698BF88865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{275295C9-E3BF-4D63-B7A6-83698BF88865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{275295C9-E3BF-4D63-B7A6-83698BF88865}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8648A931-0DB8-43DF-88D9-FCF87298B684} = {5CF29ACF-04F6-40E5-B410-709535122020}
+	EndGlobalSection
+EndGlobal
