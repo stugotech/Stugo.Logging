@@ -22,14 +22,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Stugo.AssemblyDetails, Version=1.1.6141.24665, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Stugo.AssemblyDetails.1.1.6141.24665\lib\net452\Stugo.AssemblyDetails.dll</HintPath>
@@ -65,8 +57,8 @@
     <Compile Include="..\Stugo.Logging\Properties\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="..\Stugo.Logging\Properties\VersionInfo.generated.cs">
-      <Link>Properties\VersionInfo.generated.cs</Link>
+    <Compile Include="..\Stugo.Logging\Properties\VersionInfo.cs">
+      <Link>Properties\VersionInfo.cs</Link>
     </Compile>
     <Compile Include="LoggerTest.cs" />
   </ItemGroup>
@@ -83,5 +75,4 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(SolutionDir)\tools\NuGet\NuGet.targets" />
 </Project>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Stugo.Logging</id>
+    <version>$version$</version>
+    <authors>Stugo Ltd</authors>
+    <description>Simplifies logging using log4net.</description>
+    <copyright>Copyright (c) Stugo Ltd 2016</copyright>
+  </metadata>
+  <files>
+    <file src="bin\net40\*.*" target="lib\net40" />
+    <file src="bin\net45\*.*" target="lib\net45" />
+  </files>
+</package>
