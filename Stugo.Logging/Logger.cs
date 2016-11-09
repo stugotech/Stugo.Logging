@@ -40,7 +40,7 @@ namespace Stugo.Logging
             EnsureConfigFile(logFileConfigPath);
             var configFile = new FileInfo(logFileConfigPath);
             log4net.Config.XmlConfigurator.ConfigureAndWatch(configFile);
-            GetLogger(typeof(Logger)).Notice($"**** Logging started for {entryAssembly.GetName().Name}, version {callingAssemblyInspector.CurrentVersion} ****");
+            GetLogger(typeof(Logger)).Notice($"**** Logging started for {entryAssembly.GetName().Name}, version {callingAssemblyInspector.CurrentVersion} ****", nameof(Init));
         }
 
 
