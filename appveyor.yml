@@ -1,6 +1,6 @@
 environment:
   PROJECT_NAME: Stugo.Logging
-  VERSION_NUMBER: 1.1.0
+  VERSION_NUMBER: 1.2.0
   VERSION_PRE_TAG: 
 
 version: $(VERSION_NUMBER).{build}
@@ -17,7 +17,7 @@ build_script:
       msbuild /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /p:Configuration=net45 /m
       rmdir /S /Q %PROJECT_NAME%\bin\nupkg || true
       mkdir %PROJECT_NAME%\bin\nupkg
-      nuget pack %PROJECT_NAME%\%PROJECT_NAME%.nuspec -OutputDirectory %PROJECT_NAME%\bin\nupkg\ /symbols -Version "%APPVEYOR_BUILD_VERSION%"
+      nuget pack %PROJECT_NAME%\%PROJECT_NAME%.nuspec -OutputDirectory %PROJECT_NAME%\bin\nupkg\ -Version "%APPVEYOR_BUILD_VERSION%"
 
 artifacts:
   - path: $(PROJECT_NAME)\bin\nupkg\*.nupkg

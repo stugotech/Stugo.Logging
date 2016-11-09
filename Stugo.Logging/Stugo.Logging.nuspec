@@ -12,7 +12,9 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\net40\*.*" target="lib\net40" />
-    <file src="bin\net45\*.*" target="lib\net45" />
+    <file src="bin\net40\Stugo.Logging.dll" target="lib\net40\" />
+    <file src="bin\net40\Stugo.Logging.pdb" target="lib\net40\" />
+    <file src="bin\net45\Stugo.Logging.dll" target="lib\net45\" />
+    <file src="bin\net45\Stugo.Logging.pdb" target="lib\net45\" />
   </files>
 </package>
