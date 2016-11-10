@@ -9,7 +9,7 @@ matrix:
   fast_finish: true
 
 init:
-  - $env:FULL_VERSION="$($env:APPVEYOR_BUILD_VERSION)$($env:VERSION_PRE_TAG)"
+  - ps: $env:FULL_VERSION="$($env:APPVEYOR_BUILD_VERSION)$($env:VERSION_PRE_TAG)"
 
 before_build:
   - cmd: nuget restore
