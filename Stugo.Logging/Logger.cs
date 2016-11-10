@@ -16,7 +16,7 @@ namespace Stugo.Logging
             {
                 // create one log file per entry assembly to avoid problems with locking
                 var entryAssembly = Assembly.GetEntryAssembly() ?? Assembly.GetExecutingAssembly();
-                Init(entryAssembly, Assembly.GetCallingAssembly());
+                Init(entryAssembly);
             }
             catch
             {
@@ -25,11 +25,9 @@ namespace Stugo.Logging
         }
 
 
-        private static void Init(Assembly entryAssembly, Assembly callingAssembly = null)
+        private static void Init(Assembly entryAssembly)
         {
-            callingAssembly = callingAssembly ?? Assembly.GetCallingAssembly();
             var entryAssemblyInspector = new AssemblyDetailsInspector(entryAssembly);
-            var callingAssemblyInspector = new AssemblyDetailsInspector(callingAssembly);
 
             var logFileName = string.Format(LogFileNameFormat, entryAssembly.GetName().Name);
             var logFilePath = Path.Combine(entryAssemblyInspector.ProgramDataDirectory, logFileName);
@@ -40,7 +38,6 @@ namespace Stugo.Logging
             EnsureConfigFile(logFileConfigPath);
             var configFile = new FileInfo(logFileConfigPath);
             log4net.Config.XmlConfigurator.ConfigureAndWatch(configFile);
-            GetLogger(typeof(Logger)).Notice($"**** Logging started for {entryAssembly.GetName().Name}, version {callingAssemblyInspector.CurrentVersion} ****", nameof(Init));
         }
 
 
