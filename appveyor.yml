@@ -1,6 +1,6 @@
 environment:
   PROJECT_NAME: Stugo.Logging
-  VERSION_NUMBER: 2.0.0
+  VERSION_NUMBER: 2.0.1
   VERSION_PRE_TAG: ''
 
 version: $(VERSION_NUMBER).{build}
